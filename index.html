@@ -4,12 +4,14 @@
 	<title>Yemek Sepeti</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/1b1876594c.js" crossorigin="anonymous"></script>
 	<script src="addCart.js" async></script>
 </head>
 
 
 <body>
+	<!--Menü-->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
 	  <a class="navbar-brand" href="#"><img src="image/yemekSepetiLogo.png"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,50 +55,43 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 col-md-3" id="columnLeft">
-				<div>
-					<form>
-				  		<div class="form-group">
-						    <label for="exampleInputEmail1">Kullanıcı Adı/Eposta</label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-						</div>
-					 	<div class="form-group">
-						    <label for="exampleInputPassword1">Şifre</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1">
-					  	</div>
-					  	<div class="form-group form-check">
-					  		<a href="#"> Şifremi Unuttum</a>
-						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						    <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
-					  	</div>
-		  				<button type="submit" class="btn btn-success btn-block">Üye Girişi</button>
-		  				<p>veya</p>
-		  				<button type="submit" class="btn btn-primary btn-block">Facebook ile Giriş Yap</button>
-	  				</form>
-	  				<div>
-	  					<div class="container">
-	  						<!-- <div class="section-header">YEMEK SEPETİM
-	  							<button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button>
-	  						</div> -->
-	  						<section class="container content-section">
-					            <h2 class="section-header">YEMEK SEPETİ <button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button></h2>
-					            <div class="cart-row">
-					                <span class="cart-item cart-header cart-column">ITEM</span>
-					                <span class="cart-price cart-header cart-column">PRICE</span>
-					                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-					            </div>
-					            <div class="cart-items">
-					            </div>
-					            <div class="cart-total">
-					                <strong class="cart-total-title">Total</strong>
-					                <span class="cart-total-price">$0</span>
-					            </div>
-					            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-					        </section>
-	  						
-	  					</div>
-	  				</div>	
+				<form>
+					<div class="form-group">
+					    <label for="exampleInputEmail1">Kullanıcı Adı/Eposta</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					</div>
+				 	<div class="form-group">
+					    <label for="exampleInputPassword1">Şifre</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1">
+				  	</div>
+				  	<div class="form-group form-check">
+				  		<a href="#"> Şifremi Unuttum</a>
+					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+					    <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
+				  	</div>
+		  			<button type="submit" class="btn btn-success btn-block">Üye Girişi</button>
+		  			<p>veya</p>
+		  			<button type="submit" class="btn btn-primary btn-block">Facebook ile Giriş Yap</button>
+	  			</form>
+	  				<br>
+	  			<div class="ys-basket">
+	  			    <div class="section-header">
+	  			    	<button class="btn btn-danger" id="trashButton" type="button"><i class="fas fa-trash-alt"></i></button>
+	  			    </div>
+				        <div class="cart-row">
+				           <span class="cart-item cart-header cart-column">ITEM</span>
+				           <span class="cart-price cart-header cart-column">PRICE</span>
+				           <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+				        </div>
+				        <div class="cart-items">
+				        </div>
+				        <div class="cart-total">
+				            <strong class="cart-total-title">Toplam</strong>
+				            <span class="cart-total-price">$0</span>
+				        </div>
+				        <button class="btn btn-primary btn-purchase" type="button">SEPETİ ONAYLA</button>
 				</div>
-			</div>
+	  		</div>
 
 			<div class="col-9 col-sm-9 col-md-9" id="columnRight">
 				<img src="image/header.png" class="img-fluid headerImage" alt="Header image">

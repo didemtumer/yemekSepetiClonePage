@@ -35,3 +35,25 @@
 	height: 10px;
 	display: block;
 }
+ul{
+	list-style-type: none;;
+}
+.section-header {
+	width: 100%;
+	height: 35px;
+	
+	
+}
+#trashButton{
+	width: 100%;
+	height: 35px;
+	background-color: #AC000B;
+	padding: 10px 11px;
+	margin:12px 0px 2px;
+	box-sizing: border-box;
+}
+#trashButton::before{
+	content:"YEMEK SEPETİ  ";
+	font-family: 'Open Sans', sans-serif;
+	
+}
