@@ -126,3 +126,20 @@ ul{
 	background-color: #FFFFFF;
 	border: none;
 }
+.gray{
+	width: 100%;
+	height: 70px;
+	background-color: #FFD55A;
+}
+strong{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #333333;
+	margin:3px 0;
+}
+div .textInfo {
+	color: black;
+	font-size: 11px;
+	font-family:  Verdana, Geneva, sans-serif;
+	margin: 0 0 10px;
+}
