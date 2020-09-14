@@ -52,6 +52,7 @@ function quantityChanged(event) {
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement;
+    //select the text
     var title = shopItem.getElementsByClassName('shop-item-title')[0].textContent;
     var price = shopItem.getElementsByClassName('shop-item-price')[0].textContent;
     
