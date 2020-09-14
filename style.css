@@ -1,3 +1,6 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
 .navbar{
 	background-color: #ab0012;
 }
@@ -7,6 +10,15 @@
 	height: 40px;
 	padding: 6px 20px 6px 12px;
 }
+.nav-item  a{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #FF6508;
+}
+.nav-tabs .nav-link:not(.active) {
+   color: black ;
+}
+
 .jumbotron.jumbotron-fluid{
 	padding-bottom: 0.1rem;
 	margin-top: 1.5rem;
@@ -41,8 +53,16 @@ ul{
 .section-header {
 	width: 100%;
 	height: 35px;
-	
-	
+}
+#baslik li a{
+	color: #FF6508;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #FF7208;
+	font-weight: 700;
+}	
+.fa-youtube{
+	color: #FF7208;
 }
 #trashButton{
 	width: 100%;
@@ -56,4 +76,53 @@ ul{
 	content:"YEMEK SEPETİ  ";
 	font-family: 'Open Sans', sans-serif;
 	
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 0.2em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-row {
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+.cart-item {
+    width: 55%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 12px;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 25%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 12px;
+}
+.cart-quantity-input{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border:1px solid rgba(194, 188, 183, 1);
+}
+.fa-times{
+	
+	color: #AC000B;
+}
+.btn-danger.removeTimes{
+	background-color: #FFFFFF;
+	border: none;
 }
