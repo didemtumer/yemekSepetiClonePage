@@ -1,0 +1,37 @@
+.navbar{
+	background-color: #ab0012;
+}
+#navbarDropdown{
+	background-color: white;
+	width: 240px;
+	height: 40px;
+	padding: 6px 20px 6px 12px;
+}
+.jumbotron.jumbotron-fluid{
+	padding-bottom: 0.1rem;
+	margin-top: 1.5rem;
+}
+.headerImage{
+	width: 100%;
+}
+.default-quantity-input{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border:1px solid rgba(194, 188, 183, 1);
+}
+.shop-item-button{
+	width: 30px;
+	height: 30px;
+	position: relative;
+}
+.shop-item-button i{
+	position: absolute;
+	top: 40%;
+	left: 45%;
+	height: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	display: block;
+}

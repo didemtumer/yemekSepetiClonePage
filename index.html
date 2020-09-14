@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yemek Sepeti</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/1b1876594c.js" crossorigin="anonymous"></script>
+	<script src="addCart.js" async></script>
+</head>
+
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+	  <a class="navbar-brand" href="#"><img src="image/yemekSepetiLogo.png"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Adres
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Kadikoy</a>
+	          <a class="dropdown-item" href="#">Maltepe</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Besiktas</a>
+	        </div>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Yemek mutfak veya restoran arayın" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1>Papa John's Pizza, Maltepe (Küçükyalı Mah.)</h1>
+	    <nav aria-label="breadcrumb">
+	 		 <ol class="breadcrumb">
+	    		<li class="breadcrumb-item"><a href="#">Istanbul Yemek Siparişi</a></li>
+	   			<li class="breadcrumb-item"><a href="#">Papa John's Pizza</a></li>
+	    		<li class="breadcrumb-item active" aria-current="page">Papa John's Pizza, Maltepe(Küçükyalı)</li>
+	  		</ol>
+		</nav>
+	  </div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-md-3" id="columnLeft">
+				<div>
+					<form>
+				  		<div class="form-group">
+						    <label for="exampleInputEmail1">Kullanıcı Adı/Eposta</label>
+						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+					 	<div class="form-group">
+						    <label for="exampleInputPassword1">Şifre</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1">
+					  	</div>
+					  	<div class="form-group form-check">
+					  		<a href="#"> Şifremi Unuttum</a>
+						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						    <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
+					  	</div>
+		  				<button type="submit" class="btn btn-success btn-block">Üye Girişi</button>
+		  				<p>veya</p>
+		  				<button type="submit" class="btn btn-primary btn-block">Facebook ile Giriş Yap</button>
+	  				</form>
+	  				<div>
+	  					<div class="container">
+	  						<!-- <div class="section-header">YEMEK SEPETİM
+	  							<button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button>
+	  						</div> -->
+	  						<section class="container content-section">
+					            <h2 class="section-header">YEMEK SEPETİ <button class="btn btn-danger" type="button"><i class="fas fa-trash-alt"></i></button></h2>
+					            <div class="cart-row">
+					                <span class="cart-item cart-header cart-column">ITEM</span>
+					                <span class="cart-price cart-header cart-column">PRICE</span>
+					                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+					            </div>
+					            <div class="cart-items">
+					            </div>
+					            <div class="cart-total">
+					                <strong class="cart-total-title">Total</strong>
+					                <span class="cart-total-price">$0</span>
+					            </div>
+					            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+					        </section>
+	  						
+	  					</div>
+	  				</div>	
+				</div>
+			</div>
+
+			<div class="col-9 col-sm-9 col-md-9" id="columnRight">
+				<img src="image/header.png" class="img-fluid headerImage" alt="Header image">
+
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+				  	<li class="nav-item" role="presentation">
+				    	<a class="nav-link active" id="baslik-tab" data-toggle="tab" href="#baslik" role="tab" aria-controls="baslik" aria-selected="true">Başlıklar</a>
+				  	</li>
+				  	<li class="nav-item" role="presentation">
+				    	<a class="nav-link" id="menu-tab" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="false">Menü</a>
+				  	</li>
+				  	<li class="nav-item" role="presentation">
+				    	<a class="nav-link" id="bilgiler-tab" data-toggle="tab" href="#bilgiler" role="tab" aria-controls="bilgiler" aria-selected="false">Bilgiler</a>
+				  	</li>
+				  	<li class="nav-item" role="presentation">
+				    	<a class="nav-link" id="yorumlar-tab" data-toggle="tab" href="#yorumlar" role="tab" aria-controls="yorumlar" aria-selected="false">Yorumlar</a>
+				  	</li>
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+				  	<div class="tab-pane fade show active" id="baslik" role="tabpanel" aria-labelledby="baslik-tab">
+				  		<div class="container">
+				  			<div class="row">
+				  				<div class="col-5 col-md-5">
+				  					<ul>
+										<li><a href="#">Algida Menüleri</a></li>
+										<li><a href="#">Vodafone Menüleri</a></li>
+										<li><a href="#">Fırsat Menüleri</a></li>
+										<li><a href="#">Sarımsaklı Tatlar</a></li>
+										<li><a href="#">Başlangıçlar</a></li>
+										<li><a href="#">Orta Boy Pizzalar( 2 Kişilik)</a></li>
+									</ul>
+				  				</div>
+				  				<div class="col-5 col-md-5">
+				  					<ul>
+										<li><a href="#">Büyük Boy Pizzalar( 3 - 4 Kişilik)</a></li>
+										<li><a href="#">Küçük Boy Pizzalar( 1 Kişilik)</a></li>
+										<li><a href="#">Dondurmalar</a></li>
+										<li><a href="#"> Tatlılar</a></li>
+										<li><a href="#">İçecekler</a></li>
+										<li><a href="#">Soslar</a></li>
+									</ul>
+				  				</div>
+				  			</div>
+				  		</div>
+				  	</div>
+				  	<div class="tab-pane fade" id="menu" role="tabpanel" aria-labelledby="menu-tab">
+				  		<div class="container restaurantDetailBox">
+				  			<div class="row head gray">
+				  				<div class="col-1">
+				  					<i class="fas fa-utensils"></i>
+				  				</div>
+				  				<div class="col-10">
+				  					<strong>En Çok Tercih Edilenler</strong>
+				  					<p class="text-info">Yemeksepeti kullanıcıları tarafından en çok sipariş edilen ve en çok favori olarak belirtilen ürünler.</p>
+				  				</div>
+				  			</div>
+				  			<div class="listBody">
+				  				<ul>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  							
+				  								<a class="shop-item-title"href="#">Orta Boy Pizza (1 + 1)</a>
+				  								<span class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </span>
+				  							
+				  								<p><span class="shop-item-price">50</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Büyük Boy Pizza (1 + 1)</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">90</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Tek Büyük Boy Pizza</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">90</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  							
+				  								<a class="shop-item-title"href="#">Orta Boy Pizza (1 + 1 )</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">50</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  							
+				  								<a class="shop-item-title"href="#">Küçük Boy Pizza</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">30</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  				</ul>
+				  			</div>
+
+				  			<div class="row headFirsat">
+				  				<div class="col-10">
+				  					<strong>Fırsat Menüleri</strong>
+				   				</div>
+				  			</div>
+				  			<div class="listBody">
+				  				<ul>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Enerjik Yaz Menüsü</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">114</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Magnum Mini 6'lı Menü</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">85</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Dev Doyuran Menü</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">55</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Italliano Pizza</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">52</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  					<li>
+				  						<div class="row shop-item">
+				  							<div class="col product-action">
+					  							<input class="default-quantity-input" type="number" name="" value="1">
+					  							<button type="button" class="btn btn-success shop-item-button"><i class="fas fa-plus"></i></button>
+				  											  							
+				  								<a class="shop-item-title"href="#">Tek Büyük Boy Pizza</a>
+				  								<p class="shop-item-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+				  							
+				  								<p><span class="shop-item-price">90</span> TL</p>
+				  							</div>
+				  						</div>
+				  					</li>
+				  				</ul>
+				  			</div>
+				  			
+				  		</div>
+				  	</div>
+				  	<div class="tab-pane fade" id="bilgiler" role="tabpanel" aria-labelledby="bilgiler-tab">...</div>
+				  	<div class="tab-pane fade" id="yorumlar" role="tabpanel" aria-labelledby="yorumlar-tab">...</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+</body>
+</html>
